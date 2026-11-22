@@ -622,7 +622,9 @@ public class PhotoPickerActivity extends AppCompatActivity {
     }
 
     private void initStateForBottomSheet() {
-        if (!isAccessibilityEnabled() && !mSelection.canSelectMultiple()
+        final boolean forceExpanded = getResources().getBoolean(
+                R.bool.config_force_photo_picker_expanded);
+        if (!forceExpanded && !isAccessibilityEnabled() && !mSelection.canSelectMultiple()
                 && !isOrientationLandscape()) {
             final int peekHeight = getBottomSheetPeekHeight(this);
             mBottomSheetBehavior.setPeekHeight(peekHeight);
