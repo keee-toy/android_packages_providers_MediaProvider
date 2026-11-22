@@ -15,6 +15,13 @@
 -->
 
 <resources>
+    <!--
+        Whether the legacy Photo Picker should start fully expanded for single-select requests.
+        The default preserves the platform bottom-sheet behavior; products may overlay this when
+        the collapsed sheet leaves excessive unused space on their display.
+    -->
+    <bool name="config_force_photo_picker_expanded">false</bool>
+
     <string-array name="config_supported_transcoding_relative_paths" translatable="false">
       <item>DCIM/Camera/</item>
     </string-array>
